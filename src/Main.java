@@ -11,6 +11,7 @@ public class Main {
         for (Ember item : lista){
             System.out.println(item);
         }
+        leghosszabbNev();
     }
     public static void fajlBeOlvasas(){
         try {
@@ -27,6 +28,16 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static void leghosszabbNev(){
+        Ember leghosszabb = lista.get(0);
+        for (Ember item : lista){
+            if (item.getNev().length()>leghosszabb.getNev().length()){
+                leghosszabb=item;
+            }
+        }
+        System.out.printf("A leghosszabb névvel rendelkező ember: %s, életkora: %d", leghosszabb.getNev(), leghosszabb.getEletkor());
     }
 }
 /* *

@@ -12,6 +12,7 @@ public class Main {
             System.out.println(item);
         }
         leghosszabbNev();
+        eletkorAtlag();
     }
     public static void fajlBeOlvasas(){
         try {
@@ -37,8 +38,16 @@ public class Main {
                 leghosszabb=item;
             }
         }
-        System.out.printf("A leghosszabb névvel rendelkező ember: %s, életkora: %d", leghosszabb.getNev(), leghosszabb.getEletkor());
+        System.out.printf("A leghosszabb névvel rendelkező ember: %s, életkora: %d\n", leghosszabb.getNev(), leghosszabb.getEletkor());
 
+    }
+
+    public static void eletkorAtlag(){
+        double kor = 0;
+        for (Ember item : lista){
+            kor += item.getEletkor();
+        }
+        System.out.println("Átlagéletkor: " + (kor/lista.size()));
     }
 }
 /* *

@@ -1,8 +1,8 @@
-Mariann;26
+Bogdán Marianna;26
 Dani;16
 Bálint;18
-Bálint;17
-Lilla;17
-Zéti;17
+Schéda Bálint;17
+Pray Lilla;17
+Ménes Megyer Zétény;17
 Letti;19
 Erik;22

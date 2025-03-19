@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class Main {
     static ArrayList<Ember> lista = new ArrayList<>();
+    static ArrayList<Ember> nagykoruak=new ArrayList<>();
+    static ArrayList<Ember> kiskoruak=new ArrayList<>();
     public static void main(String[] args) {
         fajlBeOlvasas();
         for (Ember item : lista){
@@ -13,6 +15,11 @@ public class Main {
         }
         leghosszabbNev();
         eletkorAtlag();
+        nagyKoruak();
+        kiir(nagykoruak, "A nagykorú emberek: ");
+        System.out.println("----------------------------------------------------");
+        kiir(kiskoruak, "A kiskorúak:");
+
     }
     public static void fajlBeOlvasas(){
         try {
@@ -49,6 +56,26 @@ public class Main {
         }
         System.out.println("Átlagéletkor: " + (kor/lista.size()));
     }
+
+    public static void nagyKoruak(){
+
+        for (Ember item : lista){
+            if (item.getEletkor()>=18){
+                nagykoruak.add(item);
+            }
+            else {
+                kiskoruak.add(item);
+            }
+        }
+
+
+    }
+    public static void kiir(ArrayList<Ember> lista, String szoveg){
+        System.out.println(szoveg);
+        for (Ember item: lista){
+            System.out.println(item);
+        }
+    }
 }
 /* *
 1. feladat:
@@ -58,6 +85,7 @@ Hozz létre egy fájlt adatok.txt néven, és írj bele több sort (pl. neveket 
 - Beolvassa az összes sort,
 - Kiírja a leghosszabb nevet,
 - Kiszámítja az életkorok átlagát.
+- gyűjtsük ki 2 új listába, HOGY kik vásárolhatnak dohányboltban és kik nem.
 
 FileWriter writer = new FileWriter("pelda.txt", true);
 * */

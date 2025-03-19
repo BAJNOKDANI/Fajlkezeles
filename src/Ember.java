@@ -31,6 +31,16 @@ public class Ember {
         this.eletkor = eletkor;
     }
 
+    public String monogramm(){
+        String s = "";
+        String[] nevek = nev.split(" ");
+        for (String item : nevek){
+            s += item.charAt(0)+".";
+        }
+
+        return s;
+    }
+
     @Override
     public String toString() {
         return  nev +

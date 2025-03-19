@@ -19,7 +19,7 @@ public class Main {
         kiir(nagykoruak, "A nagykorú emberek: ");
         System.out.println("----------------------------------------------------");
         kiir(kiskoruak, "A kiskorúak:");
-
+        monogramm();
     }
     public static void fajlBeOlvasas(){
         try {
@@ -74,6 +74,12 @@ public class Main {
         System.out.println(szoveg);
         for (Ember item: lista){
             System.out.println(item);
+        }
+    }
+
+    public static void monogramm(){
+        for (Ember item : lista){
+            System.out.println(item.monogramm());
         }
     }
 }

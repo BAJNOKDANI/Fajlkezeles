@@ -38,6 +38,7 @@ public class Main {
             }
         }
         System.out.printf("A leghosszabb névvel rendelkező ember: %s, életkora: %d", leghosszabb.getNev(), leghosszabb.getEletkor());
+
     }
 }
 /* *
